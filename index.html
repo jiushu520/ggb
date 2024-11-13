@@ -134,7 +134,7 @@
 </head>
 <body>
     <div id="chat-container">
-        <h3 id="title">玖数有作图</h3>
+        <h3 id="title">玖数作图</h3>
         
         <div id="model-selector-container" style="text-align: center; margin-bottom: 10px;">
             <label for="model-selector">选择模型：</label>
@@ -291,7 +291,7 @@
 
                 const data = await response.json();
                 const assistantMessage = data.choices[0].message.content;
-                this.displayMessageStepByStep(`玖数：${assistantMessage}`, 'assistant-message');
+                this.displayMessageStepByStep(`${assistantMessage}`, 'assistant-message');
                 this.messages.push({ "role": "assistant", "content": assistantMessage });
             } catch (error) {
                 console.error("请求出错:", error);
